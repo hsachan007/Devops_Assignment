@@ -15,14 +15,12 @@ jobs:
       - name: Run basic test (check files exist)
         run: |
           test -f index.html
-          test -f style.css
-          test -f script.js
           echo "All required files are present."
 
       - name: Build / Package
         run: |
           mkdir -p build
-          cp index.html style.css script.js build/
+          cp index.html build/
           echo "Build complete."
 
       - name: Configure AWS credentials
